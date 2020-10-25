@@ -13,6 +13,21 @@
   }
   * {
     box-sizing: border-box;
+
+    // w3c spec
+    scrollbar-width: 10px;
+    scrollbar-color: $dark-background $dark-primary-dull-color;
+
+    // Chrome only
+    &::-webkit-scrollbar {
+      width: 12px;
+    }
+    &::-webkit-scrollbar-track {
+      background: rgb(56, 56, 56);
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $dark-primary-dull-color;
+    }
   }
 
   #app {
