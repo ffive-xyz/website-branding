@@ -3,12 +3,13 @@
     position: relative;
   
     .background {
-      width: 100vw;
+      width: 100%;
       position: absolute;
       overflow: hidden;
       padding-top: 40vh;
       padding-left: 20px;
       bottom: 10vh;
+      pointer-events: none;
       @include breakpoint($sm-breakpoint, padding-left, 30vw);
       @include breakpoint($sm-breakpoint, bottom, 10vh);
       img {
@@ -22,7 +23,7 @@
           font-weight: 100;
         }
         #main-heading {
-          color: $dark-primary-color;
+          color: var(--primary-color);
           font-size: 5rem;
           @include breakpoint($md-breakpoint, font-size, 7rem);
         }

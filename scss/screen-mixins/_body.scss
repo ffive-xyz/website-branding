@@ -6,34 +6,37 @@
     padding: 0;
   }
   body {
-    background-color: $dark-background;
     height: 100vh;
     width: 100vw;
-    overflow-x: hidden;
+    overflow: hidden;
   }
   * {
     box-sizing: border-box;
 
     // w3c spec
     scrollbar-width: 10px;
-    scrollbar-color: $dark-background $dark-primary-dull-color;
+    scrollbar-color: var(--background) var(--primary-dull-color);
 
     // Chrome only
     &::-webkit-scrollbar {
       width: 12px;
     }
     &::-webkit-scrollbar-track {
-      background: rgb(56, 56, 56);
+      background: var(--background);
     }
     &::-webkit-scrollbar-thumb {
-      background: $dark-primary-dull-color;
+      background: var(--primary-dull-color);
     }
   }
 
   #app {
     width: 100%;
+    height: 100vh;
     font-family: "Work Sans", sans-serif;
-    color: $dark-color;
+    color: var(--font-color);
     transition-duration: 0.2s;
+    background-color: var(--background);
+    overflow-x: scroll;
+    // overflow-y: hidden;
   }
 }
