@@ -1,0 +1,43 @@
+@mixin page {
+    height: 80vh;
+    min-height: 500px;
+    display: flex;
+    padding-top: 5vh;
+    // @include breakpoint($md-breakpoint, padding-top, 20vh);
+  
+    .content {
+      padding: 0 20px;
+      @include breakpoint($md-breakpoint, padding, 0 10vw);
+      font-size: 2rem;
+  
+      p {
+        display: block;
+      }
+  
+      .call-to-action {
+        border: solid 1px $dark-color;
+        border-radius: 14px;
+        text-decoration: none;
+        @include breakpoint($md-breakpoint, font-size, 1.7rem);
+        font-size: 1.3rem;
+        color: $dark-color;
+        padding: 15px;
+        margin: 40px 0;
+        transition-duration: 0.2s;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        width: fit-content;
+  
+        &:hover {
+          // border: solid 5px $dark-color;
+          background-color: $dark-primary-dull-color;
+        }
+  
+        img {
+          height: 100%;
+          width: 40px;
+        }
+      }
+    }
+  }

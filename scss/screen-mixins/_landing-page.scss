@@ -1,0 +1,35 @@
+@mixin landing-page {
+    @include page;
+    position: relative;
+  
+    .background {
+      width: 100vw;
+      position: absolute;
+      overflow: hidden;
+      padding-top: 40vh;
+      padding-left: 20px;
+      bottom: 10vh;
+      @include breakpoint($sm-breakpoint, padding-left, 30vw);
+      @include breakpoint($sm-breakpoint, bottom, 10vh);
+      img {
+        @include breakpoint($sm-breakpoint, height, unset);
+        height: 120px;
+      }
+    }
+    .content {
+      .title {
+        * {
+          font-weight: 100;
+        }
+        #main-heading {
+          color: $dark-primary-color;
+          font-size: 5rem;
+          @include breakpoint($md-breakpoint, font-size, 7rem);
+        }
+        #sub-heading {
+          font-size: 2.5rem;
+          @include breakpoint($md-breakpoint, font-size, 4rem);
+        }
+      }
+    }
+  }
